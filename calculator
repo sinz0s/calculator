@@ -1,15 +1,14 @@
 import numpy as np
 import math
-
 x = np.array([1, 2, 2.5, 3, 3.5, 4.5]) # Thay số | Replace Data Here
-y = np.array([3, 6, 7, 4, 6, 4]) # Thay số | Replace Data Here
+y = np.array([8, 6, 7, 5, 7, 4]) # Thay số | Replace Data Here
 
 z = x * y
 
 sum_y = sum(y)
 sum_z = sum(z)
 
-average_num = sum_z / sum_y           # Calculates the numbers of x and y
+average_num = sum_z / sum_y           # Calculates the average numbers of x and y combined
 
 variance = sum(y * (x - average_num) ** 2) / sum_y      # Gives out the variance of x and y
 
@@ -17,6 +16,6 @@ variance_rounded = round(variance, 2)     # Rounds the calculated variance above
 
 std_deviation = math.sqrt(variance_rounded)     # Calculates the standard deviation
 
-print("Số Trung Bình | Average Numbers: %f " % average_num)    # Prints out the average number
-print("Phương sai | Variance: %f" % variance)    # Prints out the variance
-print('Độ lệch chuẩn | Standard Deviation: %f' % std_deviation)    # Prints out the standard deviation
+print(average_num)    # Prints out the average number
+print(variance_rounded)    # Prints out the variance
+print(std_deviation)    # Prints out the standard deviation
